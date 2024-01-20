@@ -1,0 +1,73 @@
+func hello(a: A[][], b: float) -> void {
+
+}
+
+const [a, b]: int;
+const a: float;
+
+func main() -> void {
+    if (a) {
+
+    } else while (1 < 5) {
+
+    }
+    if (a + n || b) {
+        h = 6;
+    } else if (a) {
+
+    }
+    match (12) {
+        case 1 -> {
+
+        } case 2 -> {
+
+        } default -> {
+
+        }
+    }
+
+    try {
+
+    } except (e: Exp) {
+
+    } except (e: Exp2) {
+
+    } finally {
+
+    }
+    [a.b()[1], b] = make int[][]: [[1], [2]]; ~ysieyiyi
+    for ([a, b]: int in a) {
+        const a: int;
+        b.c.d.f();
+    }
+    ++i;
+    a = ++a + 5 - 5 * 5 / 5 ^ 8 < ++n;
+    a.b.c[1][b + c][a.c.c].b(a[1].v).c[1].d(1, a.b[1] + 3)[a + b] = a.b.c[1][b + c][a.c.c].b(a[1].v).c[1].d()[a + b] = 1 + 2;
+    [a, b, c]: int[] = make int[]: [make int[]: [1], [2], [3]];
+    [a, b, c]: int;
+    const a: bool = false;
+    b = + + ++a;
+    a: int[] = make int[6][][];
+    [self.a, self.a, c.b] = make int[]: [1, 2, self.b];
+}
+type A enhances B, B, C {
+    secret const passive a: int = a += 2;
+    passive [a, b]: int = make str[]: [1, 2];
+    passive secure const a: int;
+    a: float;
+    social const passive func abc(a: int) -> void {
+        self.a = grand.b.c;
+    }
+    func constructor(a: int) {
+        return;
+    }
+} abstract type A enhances B, C {
+    abstract func abs(a: int, b: float) -> int[][];
+
+    passive [a, b]: int = make str[]: [1, 2];
+    passive secure const a: int;
+    a: float;
+    social const passive func abc(a: int) -> void {
+        self.a = grand.b.c;
+    }
+}

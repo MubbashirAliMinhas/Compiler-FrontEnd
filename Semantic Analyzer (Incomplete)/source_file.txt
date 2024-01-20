@@ -1,0 +1,49 @@
+ type B {
+    b: str = "a";
+}
+
+type C enhances B{
+    b: B = make B();
+}
+type D enhances C{
+    c: C = make C();
+}
+
+type V  {
+    social a: D = make D() ;
+
+    secret func constructor(a: int) {
+    }
+
+    social func constructor(a: float) {
+        
+    }
+
+    c: V = make V(2.1);
+    passive d: float = 5.1;
+
+    social func constructor() {
+        c: V = make V(2.1);
+        ~b: int = c.a.b + c.a.b;
+    }
+     v: V = make V();
+        b: int = v.a.c.b.b;
+    passive func a() -> int {
+       
+        ~return 2;
+     ~   return 2;
+    }
+}
+
+/~
+type C enhances B {
+    secret func constructor() {
+
+    }
+}
+
+c: A = make A(2.1);
+~b: int = c.a.b + c.a.b;
+d: float = A.d;
+f: C = make C();
+e: B = f;~/

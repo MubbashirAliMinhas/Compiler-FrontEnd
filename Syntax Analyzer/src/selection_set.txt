@@ -1,0 +1,90 @@
+var_fn_assign3#[#;
+var_fn_assign2#=, compound_assignment
+var_fn_assign1#[#., inc_dec, =, compound_assignment#(
+this_super1#(
+assign1#self, grand#(, !, int_const, float_const, char_const, str_const, bool_const, PM, make#inc_dec
+exp1#(#int_const, float_const, char_const, str_const, bool_const#make
+assign2#[#., ^, MDM, PM, relational, &&, ||, inc_dec, as, =, compound_assignment, ;#(
+assign3#^, MDM, PM, relational, &&, ||, ;#=, compound_assignment
+assign4#^, MDM, PM, relational, &&, ||, ;#[
+dec2#;
+dec3#ID, self, grand, (, !, int_const, float_const, char_const, str_const, bool_const, PM, make, inc_dec#[
+decs#[, :
+des_dec_ref1#]
+iterator#ID, self, grand, (, !, int_const, float_const, char_const, str_const, bool_const, PM, make
+range1#range#)
+var_id#[, (, .#,, ]
+des_this_super#self, grand
+des_this_super1#ID#self, grand
+des_dec_assign4#ID, self, grand, int_const, float_const, char_const, str_const, bool_const, inc_dec, (, !, PM, [
+var1#[#., ^, MDM, PM, relational, &&, ||, :, ;, ,, ->, ], ), range#(
+var2#^, MDM, PM, relational, &&, ||, :, ;, ,, ->, ], ), range
+var4#[#(
+var3#[
+operand#self, grand#int_const, float_const, char_const, str_const, bool_const
+operand1#[#., inc_dec, as, ^, MDM, PM, relational, &&, ||, :, ;, ,, ->, ], ), range#(
+operand2#^, MDM, PM, relational, &&, ||, :, ;, ,, ->, ], ), range
+operand3#[#^, MDM, PM, relational, &&, ||, :, ;, ,, ->, ], ), range
+OE#ID, self, grand, int_const, float_const, char_const, str_const, bool_const, inc_dec, (, !, PM
+AE#ID, self, grand, int_const, float_const, char_const, str_const, bool_const, inc_dec, (, !, PM
+RE#ID, self, grand, int_const, float_const, char_const, str_const, bool_const, inc_dec, (, !, PM
+E#ID, self, grand, int_const, float_const, char_const, str_const, bool_const, inc_dec, (, !, PM
+T#ID, self, grand, int_const, float_const, char_const, str_const, bool_const, inc_dec, (, !, PM
+P#ID, self, grand, int_const, float_const, char_const, str_const, bool_const, inc_dec, (, !, PM
+F#ID, self, grand, int_const, float_const, char_const, str_const, bool_const, inc_dec#(
+B#(
+OE1#:, ;, ,, ->, ], ), range
+AE1#||, :, ;, ,, ->, ], ), }, range
+RE1#&&, ||, :, ;, ,, ->, ], ), }, range
+E1#relational, &&, ||, :, ;, ,, ->, ], ), }, range
+T1#PM, relational, &&, ||, :, ;, ,, ->, ], ), }, range
+P1#MDM, PM, relational, &&, ||, :, ;, ,, ->, ], ), }, range
+exp#ID, self, grand, int_const, float_const, char_const, str_const, bool_const, inc_dec, (, !, PM#make
+unpacked#^, MDM, PM, relational, &&, ||, ;
+exp_array#ID, self, grand, int_const, float_const, char_const, str_const, bool_const, inc_dec, (, !, PM, make#[
+obj_dec2#(#[
+array_ref1#ID, self, grand, int_const, float_const, char_const, str_const, bool_const, inc_dec, (, !, PM, make
+array_ref2#:, ;, ,, ->, ], ), range
+array_ref_exp#ID, self, grand, int_const, float_const, char_const, str_const, bool_const, inc_dec, (, !, PM, make
+array_ref4#:, ;, ,, ->, ], ), range
+array_dec1#ID, self, grand, int_const, float_const, char_const, str_const, bool_const, inc_dec, (, !, PM, [, make
+array_index1#^, MDM, PM, relational, &&, ||, :, ;, ,, ->, ], ), range, ., inc_dec, =, compound_assignment, as
+args1#ID, self, grand, int_const, float_const, char_const, str_const, bool_const, inc_dec, (, !, PM
+dim#^, MDM, PM, relational, &&, ||, =, in, range, ,, ), {, ;
+body#ID, const, self, grand, inc_dec, if, match, while, for, try, return, continue_break, [
+match_body#case#default
+case_default#case#default#}
+except_multi#except
+except_multi1#except#finally, ID, self, grand, inc_dec, if, match, while, for, try, return, continue_break, [, }, else
+finally_pd#ID, self, grand, inc_dec, if, match, while, for, try, return, continue_break, [, }, else
+else_pd#ID, self, grand, inc_dec, if, match, while, for, try, return, continue_break, [, }, else
+type_void#str, primitive_type, ID
+SST#if#match#while#for#try#return#[
+SST1#:#[, ., inc_dec, =, (
+SST2#ID#[
+MST#ID, const, self, grand, inc_dec, if, match, while, for, try, return, continue_break, [#}
+return_exp#ID, self, grand, int_const, float_const, char_const, str_const, bool_const, inc_dec, (, !, PM
+enhance#{
+enhance1#{
+class_body#access_modifier, passive, const, ID, func, [#}
+cb_am_ps_cn#ID, func, [
+cb_am_ps_cn1#ID, func, [
+am_ps_cn#ID, func, [
+ps_cn#ID, func, [
+am_cn#ID, func, [
+am_ps#ID, func, [
+am#ID, func, [
+cn#ID, func, [
+ps#ID, func, [
+cdecs#ID#[
+fn_init_dec#ID
+abstract_body#access_modifier, passive, const, ID, func, [#}
+adecs#ID#func#[
+lang#import, const, type, abstract, ID, func, [, $
+defs#type#abstract#ID#[
+defs1#const, type, abstract, ID, [#$
+defs2#const, type, abstract, ID, [#func#$
+defs3#type#ID#[
+lang1#ID#main
+imports#import#const, type, abstract, ID, func, [, $
+imports1#import#const, type, abstract, ID, func, [, $

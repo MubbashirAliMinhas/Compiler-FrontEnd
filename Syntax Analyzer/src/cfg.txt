@@ -1,0 +1,136 @@
+<var_fn_assign1> -> <array_index><var_fn_assign2>|<var_fn_assign2>|<args><var_fn_assign3>
+<var_fn_assign2> -> .<var_fn_assign4>|inc_dec|<equals><assign1>
+<var_fn_assign3> -> .<var_fn_assign4>|<array_index><var_fn_assign2>|ϵ
+<var_fn_assign4> -> ID<var_fn_assign1>
+<this_super> -> self .|grand . ID .
+<this_super1> -> <args>|. ID<var_fn_assign1>
+<assign1> -> ID<assign2>|<this_super>ID<assign2>|<exp1>|inc_dec<var><unpacked>
+<exp1> -> <B><unpacked>|!<F><unpacked>|<const><unpacked>|PM<F><unpacked>|<obj_dec>
+<assign2> -> <array_index><assign3>|<assign3>|<args><assign4>
+<assign3> -> .<assign5>|<unpacked>|inc_dec<unpacked>|as<type><unpacked>|<equals><assign1>
+<assign4> -> .<assign5>|<unpacked>|as<type><unpacked>|<array_index><assign3>
+<assign5> -> ID<assign2>
+<equals> -> =|compound_assignment
+<dec> -> ID<dec1>
+<dec1> -> :<type><dec2>
+<dec2> -> =<dec3>|ϵ
+<dec3> -> <assign1>|<array_dec>
+<for_st> -> for (<decs>in<iterator>)<body>
+<decs> -> ID :<type>|<des_dec_ref>
+<des_dec_ref> -> [ ID<des_dec_ref1>] :<type>
+<des_dec_ref1> -> , ID<des_dec_ref1>|ϵ
+<iterator> -> <exp><range1>
+<range> -> range<exp>:<exp>
+<range1> -> <range>|ϵ
+<des_dec_assign> -> [<des_this_super>
+<des_this_super> -> ID<var_id>|<this_super><var><des_dec_assign2>
+<des_this_super1> -> <var>|<this_super><var>
+<var_id> -> <var4><des_dec_assign2>|<des_dec_assign1>
+<des_dec_assign2> -> ,<des_this_super1><des_dec_assign2>|] =<exp>;
+<des_dec_assign1> -> , ID<var_id>|]<des_dec_assign3>
+<des_dec_assign3> -> =<exp>;|:<type><des_dec_assign4>
+<des_dec_assign4> -> ;|=<exp_array>;
+<var> -> ID<var1>
+<var1> -> <array_index><var2>|<var2>|<args><var4>
+<var2> -> .<var>|ϵ
+<var4> -> <array_index><var2>|<args>.<var>|.<var>
+<var3> -> .<var>|<array_index><var2>
+<operand> -> ID<operand1>|<this_super>ID<operand1>|<const>|inc_dec<var>
+<operand1> -> <array_index><operand2>|<operand2>|<args><operand3>
+<operand2> -> .<operand4>|inc_dec|as<type>|ϵ
+<operand3> -> .<operand4>|<array_index><operand2>|ϵ
+<operand4> -> ID<operand1>
+<OE> -> <AE><OE1>
+<OE1> -> or<AE><OE1>|ϵ
+<AE> -> <RE><AE1>
+<AE1> -> &&<RE><AE1>|ϵ
+<RE> -> <E><RE1>
+<RE1> -> relational<E><RE1>|ϵ
+<E> -> <T><E1>
+<E1> -> PM<T><E1>|ϵ
+<T> -> <P><T1>
+<T1> -> MDM<P><T1>|ϵ
+<P> -> <F><P1>
+<P1> -> ^<F><P1>|ϵ
+<F> -> <operand>|<B>|!<F>|PM<F>
+<B> -> (<exp>)
+<exp> -> <OE>|<obj_dec>
+<unpacked> -> <P1><T1><E1><RE1><AE1><OE1>
+<obj_dec> -> make<obj_dec1>
+<obj_dec1> -> str<obj_dec2>|ID<obj_dec2>|primitive_type<array_ref>
+<obj_dec2> -> <args>|<array_ref>
+<array_ref> -> [<array_ref1>
+<array_ref1> -> <exp>]<array_ref2>|]<array_ref3>
+<array_ref2> -> [<array_ref_exp>|ϵ
+<array_ref_exp> -> <exp>]<array_ref2>|]<array_ref4>
+<array_ref4> -> [ ]<array_ref4>|ϵ
+<array_ref3> -> [ ]<array_ref3>|:<array_dec>
+<array_index> -> [<exp>]<array_index1>
+<array_index1> -> [<exp>]<array_index1>|ϵ
+<args> -> (<args1>
+<args1> -> <exp><args2>|)
+<args2> -> ,<exp><args2>|)
+<type> -> str<dim>|primitive_type<dim>|ID<dim>
+<dim> -> [ ]<dim>|ϵ
+<body> -> ;|<SST>|{<MST>}
+<array_dec> -> [<array_dec1>
+<array_dec1> -> <exp_array><array_dec2>|]
+<array_dec2> -> ,<exp_array><array_dec2>|]
+<exp_array> -> <exp>|<array_dec>
+<match_st> -> match (<exp>)<match_body>
+<match_body> -> <case>|<default>|{<case_default>}
+<case_pd> -> case<exp>-><body>
+<default> -> default -><body>
+<case_default> -> <case_pd><case_default>|<default>|ϵ
+<try_st> -> try<body><except_multi><finally_pd>
+<except_pd> -> except ( ID :<type>) {<MST>}
+<except_multi> -> <except_pd><except_multi1>
+<except_multi1> -> <except_pd><except_multi1>|ϵ
+<finally_pd> -> finally {<MST>}|ϵ
+<const> -> int_const|float_const|char_const|str_const|bool_const
+<if_st> -> if (<exp>)<body><else_pd>
+<else_pd> -> else<body>|ϵ
+<while_st> -> while (<exp>)<body>
+<func_dec> -> func<func_dec1>
+<func_dec1> -> ID (<params>-><type_void>{<MST>}
+<params> -> ID :<type><params1>|)
+<params1> -> , ID :<type><params1>|)
+<type_void> -> <type>|void
+<inc_dec_st> -> inc_dec<var>;
+<SST> -> ID<SST1>|const<SST2>|self<this_super1>;|grand . ID<this_super1>;|inc_dec<var>;|<if_st>|<match_st>|<while_st>|<for_st>|<try_st>|<return_st>|continue_break ;|<des_dec_assign>
+<SST1> -> <dec1>;|<var_fn_assign1>;
+<SST2> -> ID<dec1>;|<des_dec_assign>
+<MST> -> <SST><MST>|ϵ
+<return_st> -> return<return_exp>
+<return_exp> -> <exp>;|;
+<class_def> -> type ID<enhance>{<class_body>}
+<enhance> -> enhances ID<enhance1>|ϵ
+<enhance1> -> , ID<enhance1>|ϵ
+<class_body> -> <cb_am_ps_cn><class_body>|ϵ
+<cb_am_ps_cn> -> access_modifier<cb_am_ps_cn1>|passive<am_cn><adecs>|const<am_ps><adecs>|<cdecs>
+<cb_am_ps_cn1> -> <cdecs>|passive<cn><adecs>|const<ps><adecs>
+<am_ps_cn> -> access_modifier<ps_cn>|passive<am_cn>|const<am_ps>|ϵ
+<ps_cn> -> passive<cn>|const<ps>|ϵ
+<am_cn> -> access_modifier<cn>|const<am>|ϵ
+<am_ps> -> access_modifier<ps>|passive<am>|ϵ
+<cdecs> -> <dec>;|func<fn_init_dec>|<des_dec>
+<fn_init_dec> -> <func_dec1>|constructor (<params>{<MST>}
+<des_dec> -> [ ID<des_dec1>
+<des_dec1> -> , ID<des_dec1>|] :<type><des_dec_assign4>
+<cn> -> const|ϵ
+<am> -> access_modifier|ϵ
+<ps> -> passive|ϵ
+<abstract_class_def> -> abstract type ID<enhance>{<abstract_body>}
+<abstract_body> -> abstract<abstract_func><abstract_body>|<am_ps_cn><adecs><abstract_body>|ϵ
+<adecs> -> <dec>;|<func_dec>|<des_dec>
+<abstract_func> -> func ID (<params>-><type_void>;
+<lang> -> <imports><defs1>
+<defs> -> <class_def>|<abstract_class_def>|const<defs3>|<dec>;|<des_dec>
+<defs3> -> <class_def>|<dec>;|<des_dec>
+<defs1> -> <defs><defs1>|func<lang1>|ϵ
+<defs2> -> <defs><defs2>|<func_dec><defs2>|ϵ
+<lang1> -> <func_dec1><defs1>|<main><defs2>
+<main> -> main ( ) -> void {<MST>}
+<imports> -> <import_pd><imports1>|ϵ
+<imports1> -> <import_pd><imports1>|ϵ
+<import_pd> -> import ID from str_const ;
